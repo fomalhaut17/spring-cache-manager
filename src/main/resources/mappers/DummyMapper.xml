@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="userCache">
+    <cache type="PERPETUAL">
+        <property name="size" value="1024"/>
+        <property name="clearInterval" value="3600000"/> <!-- 1 hour -->
+    </cache>
+
+    <select id="selectOne" resultType="int">
+        SELECT 1
+    </select>
+</mapper>
